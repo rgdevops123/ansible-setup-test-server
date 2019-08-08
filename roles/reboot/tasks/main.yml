@@ -1,0 +1,13 @@
+---
+- name: Rebooting Server.
+  reboot:
+    msg: "Reboot initiated by Ansible."
+    pre_reboot_delay: 60
+
+- name: Wait for host to finish reboot.
+  wait_for:
+    port: "{{ wait_port }}"
+    host: "{{ inventory_hostname }}"
+    delay: 60
+  become: false
+  connection: local

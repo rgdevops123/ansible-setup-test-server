@@ -1,0 +1,8 @@
+---
+- name: Update /etc/hosts.
+  copy:
+    src: "{{ etc_hosts_location }}"
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: '0644'

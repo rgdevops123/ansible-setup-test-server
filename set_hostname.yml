@@ -1,0 +1,8 @@
+---
+# Set the Hostname of a Server.
+- hosts: "{{ server_hostname }}"
+  become: true
+  vars_files:
+    - vars/main.yml
+  roles:
+    - hostname

@@ -1,0 +1,15 @@
+---
+- name: Confirm Firewall is installed.
+  yum:
+    name: firewalld
+    state: present
+
+- name: Stop Firewall.
+  service:
+    name: firewalld
+    state: stopped
+
+- name: Disable Firewall.
+  service:
+    name: firewalld
+    enabled: no

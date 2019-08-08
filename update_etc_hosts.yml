@@ -1,0 +1,8 @@
+---
+# Update /etc/hosts.
+- hosts: all
+  become: true
+  vars_files:
+    - vars/main.yml
+  roles:
+    - hosts

@@ -1,0 +1,10 @@
+- name: Install EPEL.
+  yum:
+    name:
+      - epel-release
+    state: present
+
+- name: Install git, htop, tree and vim.
+  yum:
+    name: ['git', 'htop', 'tree', 'vim']
+    state: present
