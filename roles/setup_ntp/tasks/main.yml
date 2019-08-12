@@ -4,9 +4,6 @@
     name: ['ntp', 'ntpdate']
     state: present
 
-- name: Select NTP Pool.
-  command: ntpdate 0.centos.pool.ntp.org
-
 - name: Start NTP.
   service:
     name: ntpd

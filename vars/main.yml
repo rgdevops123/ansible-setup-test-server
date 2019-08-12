@@ -1,5 +1,4 @@
 ---
 etc_hosts_location: "/home/ansible/testing/etc/hosts"
-server_hostname: "test-server"
 swap_file: "/swapfile"
 wait_port: 22

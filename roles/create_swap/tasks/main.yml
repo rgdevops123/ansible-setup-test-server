@@ -15,6 +15,7 @@
 
 - name: Format swap file.
   command: mkswap {{ swap_file }}
+  when: not swap_file_check.stat.exists
 
 - name: Add to fstab.
   lineinfile:

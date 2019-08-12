@@ -1,4 +1,4 @@
 ---
-- name: Change Hostname.
-  hostname:
-    name: "{{ server_hostname }}"
+- name: Set hostname to match EC2 Name.
+  hostname: 
+    name: "{{ inventory_hostname }}"
